@@ -16,10 +16,17 @@ class Solution(object):
                 if balance != 0:
                     continue
 
+                # substring is balanced and forms ()
                 if i == start + 1:
                     answer += 1
                 else:
+
+                    # substring is balanced but is outer parentheses
                     answer += 2 * dac(start + 1, i)
+
+                # move head one step forward
+                # think of case ()()
+                # without start = i + 1, it returns 3
                 start = i + 1
 
             return answer
