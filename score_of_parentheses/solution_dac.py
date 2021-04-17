@@ -10,6 +10,11 @@ class Solution(object):
         def dac(start, end):
             answer = balance = 0
 
+            # Divide and Conquer Solution
+            # Given (()(()))
+            # 1: 2 * '()(())'
+            # 2: 2 * (1 + 2 * '()')
+            # 3: 2 * (1 + 2) = 6
             for i in range(start, end):
                 balance += 1 if S[i] == '(' else -1
 
