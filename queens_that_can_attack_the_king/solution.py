@@ -7,7 +7,7 @@ from typing import List
 class Solution:
 
     # Think of the problem in the opposite direction.
-    # Instead of check if queen can approach the king, check if the king can approach queens.
+    # Instead of check if a queen can approach the king, check if the king can approach queens.
     # There are 8 directions the king can move and they are expressed as list of delta.
     # For each direction, the king can move at most 7 steps (8-1).
     # Firstly, as we know the king can't go out of chessboard, we should check that. (out of bounds)
@@ -30,7 +30,7 @@ class Solution:
 
             # O(1)
             # king can move at most 7 steps
-            for i in range(1, 8):
+            for i in range(1, size):
                 x = king_x + (dx * i)
                 y = king_y + (dy * i)
 
