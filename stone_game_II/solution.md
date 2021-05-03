@@ -2,7 +2,7 @@
 
 This problem can be solved using Dynamic Programming.
 
-You can think of this problem as given current position, `i` and `m`, trying all possible `x` in range `1 <= x <= m` and find maximum score.
+You can think of this problem as given current position, `i` and `m`, trying all possible `x` in range `1 <= x <= 2m` and find maximum score.
 
 For example, given `piles = [2,7,9,4,4]`,
 
@@ -45,7 +45,7 @@ def game(i, m):
     
     min_score = 2 ** 31 - 1
     
-    # as range of x equals 1 <= x <= m
+    # as range of x equals 1 <= x <= 2m
     # we should test every possible value of x
     for x in range(1, 2 * m + 1):
 
